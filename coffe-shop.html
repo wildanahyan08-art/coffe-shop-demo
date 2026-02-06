@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Coffe Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-coffee"></i>
+                <span>D'Coffe Shop</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="fade-in">Kopi Terbaik untuk Hari Terbaik</h1>
+            <p class="fade-in">Temukan cita rasa kopi premium dengan racikan khusus dari biji kopi pilihan terbaik. Nikmati suasana nyaman dan teman terbaik di Brew & Bean Coffee Shop.</p>
+            <a href="#menu" class="btn fade-in">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="container">
+            <h2>Menu Kami</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Semua</button>
+                <button class="category-btn" data-category="coffee">Kopi</button>
+                <button class="category-btn" data-category="non-coffee">Non-Kopi</button>
+                <button class="category-btn" data-category="food">Makanan</button>
+            </div>
+            
+            <div class="menu-items" id="menuItems">
+                <!-- Menu items akan dimuat melalui JavaScript -->
+                <div class="loading">Memuat menu...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>D'Coffee Shop didirikan pada tahun 2015 dengan satu misi sederhana: menyajikan kopi terbaik dengan pengalaman terbaik untuk para pecinta kopi.</p>
+                    <p>Kami memilih biji kopi terbaik dari berbagai penjuru Indonesia, dipanggang dengan sempurna untuk menghadirkan cita rasa yang unik dan tak terlupakan.</p>
+                    <p>Selain kopi, kami juga menyajikan berbagai minuman non-kopi dan makanan ringan yang lezat, cocok untuk teman bersantai atau bekerja.</p>
+                    <p>Suasana nyaman dengan desain interior yang hangat menjadikan D'Coffee Shop tempat ideal untuk bertemu teman, bekerja, atau sekedar menikmati waktu sendiri.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Interior Coffee Shop">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Bandung No. 123, Kota Malang</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>(021) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@dcoffeshop.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Minggu: 07:00 - 22:00 WIB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>D'Coffe Shop</h3>
+                    <p>Kopi terbaik untuk hari terbaik. Temukan pengalaman menikmati kopi yang tak terlupakan bersama kami.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Menu Cepat</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#home" style="color: #f8f5f0; text-decoration: none;">Home</a></li>
+                        <li><a href="#menu" style="color: #f8f5f0; text-decoration: none;">Menu</a></li>
+                        <li><a href="#about" style="color: #f8f5f0; text-decoration: none;">Tentang Kami</a></li>
+                        <li><a href="#contact" style="color: #f8f5f0; text-decoration: none;">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Jam Buka</h3>
+                    <p>Setiap Hari: 07:00 - 22:00 WIB</p>
+                    <p>Weekend: 07:00 - 23:00 WIB</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 D'Coffe Shop & Wildan Ahyan. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data Menu
+        const menuItems = [
+            {
+                id: 1,
+                name: "Espresso",
+                description: "Kopi murni ekstrak biji kopi pilihan dengan rasa kuat dan aroma khas.",
+                price: "25.000",
+                category: "coffee",
+                image: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            },
+            {
+                id: 2,
+                name: "Cappuccino",
+                description: "Perpaduan espresso, susu steamed, dan busa susu dengan taburan coklat.",
+                price: "30.000",
+                category: "coffee",
+                image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            },
+            {
+                id: 3,
+                name: "Latte Art",
+                description: "Espresso dengan susu steamed dan seni latte yang indah di atasnya.",
+                price: "32.000",
+                category: "coffee",
+                image: "https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-1.2.1&auto=format&fit=crop&w-1350&q=80"
+            },
+            {
+                id: 4,
+                name: "Matcha Latte",
+                description: "Minuman hijau dari bubuk matcha premium dicampur susu steamed.",
+                price: "28.000",
+                category: "non-coffee",
+                image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            },
+            {
+                id: 5,
+                name: "Chocolate Mint",
+                description: "Coklat panas dengan sentuhan mint yang menyegarkan.",
+                price: "26.000",
+                category: "non-coffee",
+                image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            },
+            {
+                id: 6,
+                name: "Croissant",
+                description: "Roti pastry renyah dengan isian coklat atau keju.",
+                price: "22.000",
+                category: "food",
+                image: "https://altohartley.com/wp-content/uploads/2019/01/A-Brief-History-of-the-Croissant.jpg"
+            },
+            {
+                id: 7,
+                name: "Avocado Toast",
+                description: "Roti panggang dengan topping alpukat, tomat cherry, dan biji wijen.",
+                price: "35.000",
+                category: "food",
+                image: "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            },
+            {
+                id: 8,
+                name: "Americano",
+                description: "Espresso dengan tambahan air panas, cocok untuk penikmat kopi hitam.",
+                price: "24.000",
+                category: "coffee",
+                image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            }
+        ];
+
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const menuItemsContainer = document.getElementById('menuItems');
+        const contactForm = document.getElementById('contactForm');
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Filter Menu Items by Category
+        function filterMenu(category) {
+            // Update active button
+            categoryButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Filter and display menu items
+            let filteredItems = menuItems;
+            if (category !== 'all') {
+                filteredItems = menuItems.filter(item => item.category === category);
+            }
+
+            displayMenuItems(filteredItems);
+        }
+
+        // Display Menu Items
+        function displayMenuItems(items) {
+            menuItemsContainer.innerHTML = '';
+            
+            if (items.length === 0) {
+                menuItemsContainer.innerHTML = '<p class="loading">Menu tidak tersedia untuk kategori ini.</p>';
+                return;
+            }
+            
+            items.forEach(item => {
+                const menuItemElement = document.createElement('div');
+                menuItemElement.className = 'menu-item fade-in';
+                menuItemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="menu-item-content">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <div class="price">Rp ${item.price}</div>
+                    </div>
+                `;
+                menuItemsContainer.appendChild(menuItemElement);
+            });
+        }
+
+        // Initialize menu display
+        displayMenuItems(menuItems);
+
+        // Add event listeners to category buttons
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                filterMenu(category);
+            });
+        });
+
+        // Form Submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                alert('Harap lengkapi semua field!');
+                return;
+            }
+            
+            // In a real application, you would send this data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Terima kasih ${name}! Pesan Anda telah dikirim. Kami akan membalas ke email ${email} segera.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar active state on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add fade-in animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.menu-item, .about-content, .contact-container').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
